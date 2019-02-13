@@ -80,7 +80,7 @@ trait SlapperTrait {
             "{name}" => $player->getName(),
             "{display_name}" => $player->getName(),
             "{nametag}" => $player->getNameTag(),
-			"{online_players}", count($this->getServer()->getOnlinePlayers()), $string);
+			"{online_players}" => $this->getServer()->getOnlinePlayers()
         ];
         return str_replace(array_keys($vars), array_values($vars), $this->getNameTag());
     }
